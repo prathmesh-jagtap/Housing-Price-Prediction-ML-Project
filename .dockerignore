@@ -1,0 +1,7 @@
+# Environments
+venv/
+ml_env/
+# <your virtual env name>
+
+.git
+.gitignore

@@ -31,7 +31,7 @@ class Pipeline:
     def start_data_validation(self) -> DataValidationArtifact:
         try:
             data_validation = DataValidation(data_validation_config=self.config.get_data_validation_config(),
-                                             data_ingestion_artifact=data_ingestion_artifact
+                                             #  data_ingestion_artifact=data_ingestion_artifact
                                              )
             return data_validation.initiate_data_validation()
         except Exception as e:

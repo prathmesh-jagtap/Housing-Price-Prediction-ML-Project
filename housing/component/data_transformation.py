@@ -3,8 +3,11 @@ from sklearn import preprocessing
 from housing.exception import HousingException
 from housing.logger import logging
 from housing.entity.config_entity import DataTransformationConfig
-from housing.entity.artifact_entity import DataIngestionArtifact,\
-    DataValidationArtifact, DataTransformationArtifact
+from housing.entity.artifact_entity import (
+    DataIngestionArtifact,
+    DataValidationArtifact,
+    DataTransformationArtifact
+)
 import sys
 import os
 import numpy as np
@@ -93,7 +96,7 @@ class DataTransformation:
                  ):
         try:
             logging.info(
-                f"{'=' * 20}Data Transformation log started.{'=' * 20} ")
+                f"{'=' * 20}Data Transformation log started.{'=' * 20}")
             self.data_transformation_config = data_transformation_config
             self.data_ingestion_artifact = data_ingestion_artifact
             self.data_validation_artifact = data_validation_artifact

@@ -64,10 +64,13 @@ class Pipeline:
     def run_pipeline(self):
         try:
             # data ingestion
-
             data_ingestion_artifact = self.start_data_ingestion()
+
+            # data validation
             data_validation_artifact = self.start_data_validation(
                 data_ingestion_artifact=data_ingestion_artifact)
+
+            # data transformation
             data_transformation_artifact = self.start_data_transformation(
                 data_ingestion_artifact=data_ingestion_artifact,
                 data_validation_artifact=data_validation_artifact

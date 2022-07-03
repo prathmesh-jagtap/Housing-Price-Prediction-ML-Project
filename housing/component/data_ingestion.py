@@ -6,7 +6,7 @@ from housing.logger import logging
 from housing.entity.artifact_entity import DataIngestionArtifact
 import tarfile
 import numpy as np
-from six.moves import urllib
+from urllib.request import urlretrieve
 import pandas as pd
 from sklearn.model_selection import StratifiedShuffleSplit
 
@@ -40,7 +40,7 @@ class DataIngestion:
 
             logging.info(
                 f"Downloading file from :[{download_url}] into :[{tgz_file_path}]")
-            urllib.request.urlretrieve(download_url, tgz_file_path)
+            urlretrieve(download_url, tgz_file_path)
             logging.info(
                 f"File :[{tgz_file_path}] has been downloaded successfully.")
             return tgz_file_path

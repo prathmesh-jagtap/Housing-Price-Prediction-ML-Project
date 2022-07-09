@@ -40,7 +40,7 @@ class Pipeline:
 
     def __init__(self, config: Configuartion = config) -> None:
         try:
-            super().__init__(daemon=False, name="pipeline")
+            super().__init__(name="pipeline")
             self.config = config
 
         except Exception as e:

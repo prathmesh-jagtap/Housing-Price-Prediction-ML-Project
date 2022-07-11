@@ -1,13 +1,9 @@
-from crypt import methods
-from email.policy import default
 import sys
-from unittest import result
 import pip
 from os import getcwd, path, makedirs, listdir
 import json
 from flask import Flask, request, send_file, abort, render_template
 from matplotlib.style import context
-from sklearn import pipeline
 
 from housing.util.util import read_yaml_file, write_yaml_file
 from housing.logger import LOG_DIR, logging, get_log_dataframe

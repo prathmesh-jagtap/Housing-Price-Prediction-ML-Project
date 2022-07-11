@@ -35,11 +35,14 @@ BestModel = namedtuple("BestModel", ["model_serial_number",
                                      "best_score", ])
 
 MetricInfoArtifact = namedtuple("MetricInfoArtifact",
-                                ["model_name", "model_object", "train_rmse", "test_rmse", "train_accuracy",
-                                 "test_accuracy", "model_accuracy", "index_number"])
+                                ["model_name", "model_object",
+                                 "train_rmse", "test_rmse",
+                                 "train_accuracy", "test_accuracy",
+                                 "model_accuracy", "index_number"])
 
 
-def evaluate_regression_model(model_list: list, X_train: np.ndarray, y_train: np.ndarray, X_test: np.ndarray, y_test: np.ndarray, base_accuracy: float = 0.6) -> MetricInfoArtifact:
+def evaluate_regression_model(model_list: list, X_train: np.ndarray, y_train: np.ndarray,
+                              X_test: np.ndarray, y_test: np.ndarray, base_accuracy: float = 0.6) -> MetricInfoArtifact:
     """
     Description:
     This function compare multiple regression model return best model

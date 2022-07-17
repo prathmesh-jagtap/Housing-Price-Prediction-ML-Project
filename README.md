@@ -1,8 +1,7 @@
 # Machine-Learning-Project
 
-This project is made under the guidance of Ineuron
-
-[Project_Link](https://github.com/avnyadav/machine_learning_project.git)
+Machine Learning Deploy link:
+[Housing Price Predictor](https://ml-regressor-app.herokuapp.com/)
 
 ### Creating conda Environment
 
